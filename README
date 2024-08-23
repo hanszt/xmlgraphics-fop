@@ -107,10 +107,10 @@ under the ./fop sub-directory.
   RELEASE NOTES
 ==============================================================================
 
-Version 2.9
+Version 2.9-test
 ===========
 
-Major Changes in Version 2.9
+Major Changes in Version 2.9-test
 ----------------------------
 
 * Add support for font-selection-strategy=character-by-character
