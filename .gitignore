@@ -10,3 +10,6 @@ build/
 *.bak
 .idea
 *.iml
+
+# OS Files
+.DS_Store

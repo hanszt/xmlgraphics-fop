@@ -175,23 +175,7 @@ public class SVGImageElementBridge extends AbstractGraphicsNodeBridge {
         } else {
             purl = new ParsedURL(baseURI, uriStr);
         }
-        checkLoadExternalResource(ctx, e, purl);
         return createImageGraphicsNode(ctx, e, purl);
-    }
-
-    private void checkLoadExternalResource(BridgeContext ctx, Element e, ParsedURL purl) {
-        SVGDocument svgDoc = (SVGDocument)e.getOwnerDocument();
-        String docURL = svgDoc.getURL();
-        ParsedURL pDocURL = null;
-        if (docURL != null) {
-            pDocURL = new ParsedURL(docURL);
-        }
-        UserAgent userAgent = ctx.getUserAgent();
-        try {
-//            userAgent.checkLoadExternalResource(purl, pDocURL);
-        } catch (SecurityException secEx ) {
-            throw new BridgeException(ctx, e, secEx, ERR_URI_UNSECURE, new Object[] {purl});
-        }
     }
 
     protected GraphicsNode createImageGraphicsNode(BridgeContext ctx,
